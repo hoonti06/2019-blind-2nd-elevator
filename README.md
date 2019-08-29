@@ -42,7 +42,7 @@
 
 ### Installation Prerequisites
 
-- [ ] [Go version 1.9 or greater](https://golang.org/doc/install)
+- [ ] [docker-golang:1.9.1](https://hub.docker.com/_/golang)
 
 ##### 다음의 경우 example 코드를 수행하기 위해 필요합니다.
 
@@ -51,15 +51,32 @@
 
 ### Install and Run
 
-Repository 를 Clone 하고 Elevator 서버를 실행합니다.
+우선, docker-golang:1.9.1을 설치합나다.
+```bash
+$ docker pull golang:1.9.1
+```
 
+Repository 를 Clone하고 docker-golang:1.9.1을 실행합니다.
 ```bash
 $ git clone https://github.com/kakao-recruit/2019-blind-2nd-elevator.git
 $ cd 2019-blind-2nd-elevator
-$ cd elevator/cmd/elevator
+$ ./run-docker.sh
+```
+
+docker-container 내부에서
+```
+$ cd src/2019-blind-2nd-elevator
+```
+
+아래의 2개 방법 중 하나를 선택하여 서버를 실행합니다.
+```bash 
 $ go get ./						# install libraries
 $ go build
 $ ./elevator
+```
+	또는	
+```bash 
+$ run-server.sh 	# easy-run
 ```
 
 ### Elevator Control
