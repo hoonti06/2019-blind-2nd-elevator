@@ -58,7 +58,7 @@ $ docker pull golang:1.9.1
 
 Repository 를 Clone하고 docker-golang:1.9.1을 실행합니다.
 ```bash
-$ git clone https://github.com/kakao-recruit/2019-blind-2nd-elevator.git
+$ git clone https://github.com/hoonti06/2019-blind-2nd-elevator.git
 $ cd 2019-blind-2nd-elevator
 $ ./run-docker.sh
 ```
@@ -70,13 +70,14 @@ $ cd src/2019-blind-2nd-elevator
 
 아래의 2개 방법 중 하나를 선택하여 서버를 실행합니다.
 ```bash 
-$ go get ./						# install libraries
+$ cd elevator/cmd/elevator
+$ go get ./					# install libraries
 $ go build
 $ ./elevator
-```
-	또는	
-```bash 
-$ run-server.sh 	# easy-run
+
+	또는
+	
+$ run-server.sh 			# easy-run
 ```
 
 ### Elevator Control
