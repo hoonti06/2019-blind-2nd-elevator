@@ -42,12 +42,12 @@
 
 ### Installation Prerequisites
 
-- [ ] [docker-golang:1.9.1](https://hub.docker.com/_/golang)
+- [ ] [golang:1.9.1(docker official image)](https://hub.docker.com/_/golang)
 
 ##### 다음의 경우 example 코드를 수행하기 위해 필요합니다.
 
-- [ ] Python 2.7 (or higher) or 3.4(or higher)   
-- [ ] Python Requests	
+- [ ] [Python 2.7(docker official image)](https://hub.docker/com/_/python) 
+- [ ] Python Requests
 
 ### Install and Run
 
@@ -56,14 +56,14 @@
 $ docker pull golang:1.9.1
 ```
 
-Repository 를 Clone하고 docker-golang:1.9.1을 실행합니다.
+Repository를 Clone하고 golang:1.9.1(docker official image)을 실행합니다.
 ```bash
 $ git clone https://github.com/hoonti06/2019-blind-2nd-elevator.git
 $ cd 2019-blind-2nd-elevator
 $ ./run-docker.sh
 ```
 
-docker-container 내부에서
+docker container 내부에서
 ```
 $ cd src/2019-blind-2nd-elevator
 ```
@@ -77,17 +77,22 @@ $ ./elevator
 
 	또는
 	
-$ run-server.sh 			# easy-run
+$ ./run-server.sh 			# easy-run
 ```
 
 ### Elevator Control
 
-example 코드로 어피치 맨션 문제를 풀어봅니다. python 2.7 또는 3.4 이상이 필요합니다.
+example 코드로 어피치 맨션 문제를 풀어봅니다. 
+
+python:2.7(docker official image)로 실행하기 위해 먼저 python:2.7을 설치합니다.
 
 ```bash
-$ cd 2019-blind-2nd-elevator
-$ cd example
-$ python example.py
+$ docker pull python:2.7
+```
+
+shell script를 실행하면 docker run을 통해 example 코드가 실행됩니다.
+```bash
+$ ./run-py-example.sh
 ```
 
 ### Elevator Viewer
