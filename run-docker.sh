@@ -12,4 +12,6 @@ docker run -it \
 	-v $PWD:/go/src/${PWD##*/} \
 	--network host \
 	golang:${GOLANG_VERSION} \
-	/bin/bash -c 'export PATH=$PATH:${GOROOT}/bin; /bin/bash'
+	/bin/bash -c 'export PATH=$PATH:${GOROOT}/bin;
+	cd /go/src/2019-blind-2nd-elevator;
+	./run-server.sh'

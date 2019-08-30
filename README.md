@@ -46,7 +46,7 @@
 
 ##### 다음의 경우 example 코드를 수행하기 위해 필요합니다.
 
-- [ ] [Python 2.7(docker official image)](https://hub.docker/com/_/python) 
+- [ ] [Python 2.7(docker official image)](https://hub.docker/com/_/python)
 - [ ] Python Requests
 
 ### Install and Run
@@ -56,36 +56,19 @@
 $ docker pull golang:1.9.1
 ```
 
-Repository를 Clone하고 golang:1.9.1(docker official image)을 실행합니다.
+Repository를 Clone하고 shell script를 통해 서버를 실행합니다.
 ```bash
 $ git clone https://github.com/hoonti06/2019-blind-2nd-elevator.git
 $ cd 2019-blind-2nd-elevator
 $ ./run-docker.sh
 ```
 
-docker container 내부에서
-```
-$ cd src/2019-blind-2nd-elevator
-```
-
-아래의 2개 방법 중 하나를 선택하여 서버를 실행합니다.
-```bash 
-$ cd elevator/cmd/elevator
-$ go get ./					# install libraries
-$ go build
-$ ./elevator
-
-	또는
-	
-$ ./run-server.sh 			# easy-run
-```
 
 ### Elevator Control
 
 example 코드로 어피치 맨션 문제를 풀어봅니다. 
 
-python:2.7(docker official image)로 실행하기 위해 먼저 python:2.7을 설치합니다.
-
+python:2.7(docker official image)로 실행하기 위해 먼저 docker image를 설치합니다.
 ```bash
 $ docker pull python:2.7
 ```
